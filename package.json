@@ -1,0 +1,43 @@
+{
+  "private": true,
+  "name": "snake-eat-bugs",
+  "version": "1.0.0",
+  "scripts": {
+    "lint": "eslint src",
+    "server": "node node_modules/@tangbc/tiny-node-server",
+    "less:watch": "less-watch-compiler --config less-compiler.json",
+    "build:css": "less-watch-compiler --config less-compiler.json --run-once",
+    "dev": "npm run build:watch & npm run server & npm run less:watch",
+    "build:watch": "microbundle build --format umd --sourcemap true --watch",
+    "build": "npm run lint & npm run build:css & rm -rf dist & microbundle build --format umd --sourcemap false"
+  },
+  "tinyNodeServer": {
+    "root": "./",
+    "port": 8088,
+    "log": 0
+  },
+  "main": "dist/app.js",
+  "source": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tangbc/snake-eat-bugs.git"
+  },
+  "author": "tangbc",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/tangbc/snake-eat-bugs/issues"
+  },
+  "homepage": "https://github.com/tangbc/snake-eat-bugs#readme",
+  "devDependencies": {
+    "@tangbc/tiny-node-server": "^1.0.2",
+    "eslint": "^5.12.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "less": "^3.9.0",
+    "less-watch-compiler": "^1.13.0",
+    "microbundle": "^0.9.0"
+  }
+}

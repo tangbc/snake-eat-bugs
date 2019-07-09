@@ -1,0 +1,6 @@
+<div class="sign" v-show="direct">{{ direct }}</div>
+<div class="tips" v-else>
+    <div class="tips-text" v-bind:class="init ? 'animated flash' : ''">
+        Finger slide here to switch direct after start.
+    </div>
+</div>

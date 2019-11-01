@@ -1,23 +1,23 @@
 <ul class="info">
-    <li class="score">
-        Score: <span class="large">{{ score }}</span>
-    </li>
-    <li class="msg animated fadeIn" v-show="broke">
-        <span class="text">Congratulations on breaking the {{broke}}st record !</span>
-    </li>
+  <li class="score">
+    Score: <span class="large">{{ score }}</span>
+  </li>
+  <li class="msg animated fadeIn" v-show="broke">
+    <span class="text">Congratulations on breaking the {{broke}}st record !</span>
+  </li>
 </ul>
 <div class="timekeeper">
-    {{ minute }} : {{ secound }}
+  {{ minute }} : {{ secound }}
 </div>
 <div class="records animated" v-bind:class="{ flipInX: records.length }" v-show="records.length || isMobile">
-    <div class="title">RECORDS</div>
-    <ol>
-        <li v-for="record in records" v-bind:class="'item ' + ($index < 2 ? 'No' + ($index + 1) : '')">
-            <span class="score">{{ record.score }}'</span>
-            <span class="times">
-                <span class="multi">×</span>
-                <span class="numbers">{{ record.times }}</span>
-            </span>
-        </li>
-    </ol>
+  <div class="title">RECORDS</div>
+  <ol>
+    <li v-for="record in records" v-bind:class="'item ' + ($index < 2 ? 'No' + ($index + 1) : '')">
+      <span class="score">{{ record.score }}'</span>
+      <span class="times">
+        <span class="multi">×</span>
+        <span class="numbers">{{ record.times }}</span>
+      </span>
+    </li>
+  </ol>
 </div>

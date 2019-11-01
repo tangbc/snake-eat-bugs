@@ -1,156 +1,154 @@
 .header {
-    width: 100%;
-    position: relative;;
-    font-size: 16px;
-    color: floralwhite;
-    background: #8fbc8f;
-    border: 0 solid rgba(119,136,153,0.6);
-    border-bottom: none;
+  width: 100%;
+  position: relative;;
+  font-size: 16px;
+  color: floralwhite;
+  background: #8fbc8f;
+  border: 0 solid rgba(119,136,153,0.6);
+  border-bottom: none;
 
-    .info {
+  .info {
+    margin: 0;
+    padding: 10px;
+
+    @media (min-width: 320px) and (max-width: 480px) {
+      padding: 5px;
+    }
+
+    li {
+      display: inline-block;
+      font-weight: 300;
+      padding: 5px 20px 5px 5px;
+    }
+
+    li .large {
+      display: inline-block;
+      margin-left: 5px;
+      font-weight: 300;
+      transform: scale(1.35);
+    }
+
+    li.score {
+      color: #fff;
+    }
+
+    li.record {
+      color: #ffd700;
+    }
+
+    li.msg {
+      color: yellow;
+
+      // hide tips on mobile side
+      @media (min-width: 320px) and (max-width: 480px) {
+        display: none;
+      }
+
+      .text {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .timekeeper {
+      display: inline-block;
+      position: absolute;
+      right: 15px;
+      top: 15px;
+
+      @media (min-width: 320px) and (max-width: 480px) {
+        top: 10px;
+      }
+  }
+
+  .records {
+      width: 110px;
+      position: absolute;
+      left: -130px;
+      top: -20px;
+      background: #fff;
+      color: #000;
+
+      @media (min-width: 320px) and (max-width: 480px) {
+        width: auto;
+        left: -8px;
+        top: -92px;
+        text-align: center;
+        right: -8px;
+      }
+
+      .title {
+        height: 69px;
+        line-height: 69px;
+        text-align: center;
+        background: #f5f5f5;
+        font-size: 16px;
+        font-weight: 300;
+        color: #799e96;
+
+        @media (min-width: 320px) and (max-width: 480px) {
+          height: 40px;
+          line-height: 40px;
+        }
+      }
+
+      ol {
+        list-style-type: none;
+        padding: 0 20px 20px 20px;
         margin: 0;
-        padding: 10px;
 
         @media (min-width: 320px) and (max-width: 480px) {
-            padding: 5px;
+            padding: 0;
         }
+      }
 
-        li {
-            display: inline-block;
-            font-weight: 300;
-            padding: 5px 20px 5px 5px;
-        }
-
-        li .large {
-            display: inline-block;
-            margin-left: 5px;
-            font-weight: 300;
-            -webkit-transform: scale(1.35);
-            transform: scale(1.35);
-        }
-
-        li.score {
-            color: #fff;
-        }
-
-        li.record {
-            color: #ffd700;
-        }
-
-        li.msg {
-            color: yellow;
-
-            // hide tips on mobile side
-            @media (min-width: 320px) and (max-width: 480px) {
-                display: none;
-            }
-
-            .text {
-                margin-left: 10px;
-            }
-        }
-    }
-
-    .timekeeper {
-        display: inline-block;
-        position: absolute;
-        right: 15px;
-        top: 15px;
+      .item {
+        height: 35px;
+        line-height: 35px;
 
         @media (min-width: 320px) and (max-width: 480px) {
-            top: 10px;
-        }
-    }
-
-    .records {
-        width: 110px;
-        position: absolute;
-        left: -130px;
-        top: -20px;
-        background: #fff;
-        color: #000;
-
-        @media (min-width: 320px) and (max-width: 480px) {
-            width: auto;
-            left: -8px;
-            top: -92px;
-            text-align: center;
-            right: -8px;
+          padding: 0 10px;
+          display: inline-block;
         }
 
-        .title {
-            height: 69px;
-            line-height: 69px;
-            text-align: center;
-            background: #f5f5f5;
-            font-size: 16px;
-            font-weight: 300;
-            color: #799e96;
+        .times {
+          color: #999;
+        }
 
+        &.No1 {
+          padding: 6px 0;
+
+          @media (min-width: 320px) and (max-width: 480px) {
+            padding: 0 6px;
+          }
+
+          .times {
             @media (min-width: 320px) and (max-width: 480px) {
-                height: 40px;
-                line-height: 40px;
+              position: relative;
+              left: -2px;
             }
+          }
+
+          .score {
+            font-size: 30px;
+            color: red;
+          }
         }
 
-        ol {
-            list-style-type: none;
-            padding: 0 20px 20px 20px;
-            margin: 0;
 
-            @media (min-width: 320px) and (max-width: 480px) {
-                padding: 0;
-            }
+        &.No2 {
+          padding: 4px 0;
+
+          @media (min-width: 320px) and (max-width: 480px) {
+            padding: 0 4px;
+          }
+
+          .score {
+            font-size: 22px;
+            color: red;
+          }
         }
-
-        .item {
-            height: 35px;
-            line-height: 35px;
-
-            @media (min-width: 320px) and (max-width: 480px) {
-                padding: 0 10px;
-                display: inline-block;
-            }
-
-            .times {
-                color: #999;
-            }
-
-            &.No1 {
-                padding: 6px 0;
-
-                @media (min-width: 320px) and (max-width: 480px) {
-                    padding: 0 6px;
-                }
-
-                .times {
-                    @media (min-width: 320px) and (max-width: 480px) {
-                        position: relative;
-                        left: -2px;
-                    }
-                }
-
-                .score {
-                    font-size: 30px;
-                    color: red;
-                }
-            }
-
-
-            &.No2 {
-                padding: 4px 0;
-
-                @media (min-width: 320px) and (max-width: 480px) {
-                    padding: 0 4px;
-                }
-
-                .score {
-                    font-size: 22px;
-                    color: red;
-                }
-            }
-
-        }
-    }
+      }
+  }
 }
 

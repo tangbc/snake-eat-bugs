@@ -1,35 +1,35 @@
 .wheel {
-    position: fixed;
-    width: 100%;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgb(240, 248, 255);
-    border-radius: 10px;
-    border: 0.5px dashed #a6b5c2;
+  position: fixed;
+  width: 100%;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgb(240, 248, 255);
+  border-radius: 10px;
+  border: 0.5px dashed #a6b5c2;
 
-    // &.press {
-    //     background: rgba(255, 165, 0, 0.25);
-    // }
+  // &.press {
+  //     background: rgba(255, 165, 0, 0.25);
+  // }
 
-    .sign {
-        padding: 10px;
+  .sign {
+    padding: 10px;
+  }
+
+  .tips {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+
+    .tips-text {
+      animation-duration: 2s;
+      animation-iteration-count: 2;
     }
-
-    .tips {
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 18px;
-
-        .tips-text {
-            animation-duration: 2s;
-            animation-iteration-count: 2;
-        }
-    }
+  }
 }

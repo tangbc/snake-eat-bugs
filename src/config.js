@@ -3,7 +3,7 @@ import { isMobile } from './util'
 const UNIT = isMobile ? 16 : 20
 const BORDER = UNIT / (isMobile ? 2 : 1)
 
-const screenWidth = screen.width
+const screenWidth = window.screen.width
 // const screenHeight = screen.height
 const mobileXNumbers = Math.floor(screenWidth / UNIT) - 1
 const mobileYNumbers = mobileXNumbers
@@ -13,27 +13,27 @@ const HEIGHT = (isMobile ? mobileYNumbers : 20) * UNIT
 
 // App base config
 export default {
-    // per grub piex
-    UNIT,
+  // per grub piex
+  UNIT,
 
-    // playground width
-    WIDTH,
+  // playground width
+  WIDTH,
 
-    // playground height
-    HEIGHT,
+  // playground height
+  HEIGHT,
 
-    // wraper and header borderwidth
-    BORDER,
+  // wraper and header borderwidth
+  BORDER,
 
-    // per bug could achive scores
-    SCORE: 1,
+  // per bug could achive scores
+  SCORE: 1,
 
-    // init snake length, except head
-    LENGTH: 1,
+  // init snake length, except head
+  LENGTH: 1,
 
-    // move speed
-    SPEED: 178,
+  // move speed
+  SPEED: 178,
 
-    // how many records remain, at least 2
-    RECORDS: isMobile ? 4 : 5
+  // how many records remain, at least 2
+  RECORDS: isMobile ? 4 : 5
 }

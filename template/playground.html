@@ -1,60 +1,61 @@
 <div class="curtain" v-show="!running">
-    <ul class="tips" v-if="isMobile">
-        <li>
-            Press to start or pause game.
-        </li>
-        <li>
-            <span class="start-button">START</span>
-        </li>
-    </ul>
-    <ul class="tips" v-else>
-        <li>
-            Press <code>SPACE</code> to start or pause game.
-        </li>
-        <li>Press <code>⬆️</code> <code>⬇️</code> <code>⬅️</code> <code>➡️</code> or
-            <code>W</code> <code>A</code> <code>S</code> <code>D</code> to control direct.
-        </li>
-    </ul>
+  <ul class="tips" v-if="isMobile">
+    <li>
+        Press to start or pause game.
+    </li>
+    <li>
+        <span class="start-button">START</span>
+    </li>
+  </ul>
+  <ul class="tips" v-else>
+    <li>
+        Press <code>SPACE</code> to start or pause game.
+    </li>
+    <li>Press <code>⬆️</code> <code>⬇️</code> <code>⬅️</code> <code>➡️</code> or
+        <code>W</code> <code>A</code> <code>S</code> <code>D</code> to control direct.
+    </li>
+  </ul>
 </div>
 <div class="screen" v-else>
-    <!-- snake list -->
-    <a class="snake"
-        v-for="snake in snakes"
-        v-bind:class="[snake.type, snake.direct, snake.life]"
-        v-bind:style="{
-            width: scale,
-            height: scale,
-            'background-size': bgsize,
-            top: (snake.y * unit) + 'px',
-            left: (snake.x * unit) + 'px'
-        }"
-    ></a>
-    <!-- bug list -->
-    <b class="bug"
-        v-for="bug in bugs"
-        v-bind:class="bug.eaten ? 'eaten' : 'fresh'"
-        v-bind:style="{
-            width: scale,
-            height: scale,
-            'background-size': bgsize,
-            top: (bug.y * unit) + 'px',
-            left: (bug.x * unit) + 'px'
-        }"
-    ></b>
-    <div class="pause animated fadeInPause" v-show="isPause">
-        <div class="pause-button" v-on:click="cancelPause">
-            <div class="icon"></div>
-        </div>
+  <!-- snake list -->
+  <a class="snake"
+    v-for="snake in snakes"
+    v-bind:class="[snake.type, snake.direct, snake.life]"
+    v-bind:style="{
+        width: scale,
+        height: scale,
+        'background-size': bgsize,
+        top: (snake.y * unit) + 'px',
+        left: (snake.x * unit) + 'px'
+    }"
+  ></a>
+  <!-- bug list -->
+  <b class="bug"
+    v-for="bug in bugs"
+    v-bind:class="bug.eaten ? 'eaten' : 'fresh'"
+    v-bind:style="{
+        width: scale,
+        height: scale,
+        'background-size': bgsize,
+        top: (bug.y * unit) + 'px',
+        left: (bug.x * unit) + 'px'
+    }"
+  ></b>
+  <div class="pause animated fadeInPause" v-show="isPause">
+    <div class="pause-button" v-on:click="cancelPause">
+      <div class="icon"></div>
     </div>
+  </div>
 </div>
 <div class="grid" v-el="grid"></div>
 <div id="over" class="over animated fadeIn" v-show="showResult">
-    <div class="over-box">
-        <h2>Game Over ! You lose life !</h2>
-        <p>
-            Press
-            <span v-if="isMobile">here</span>
-            <i v-else>ESC</i>
-            to restart a new game.</p>
-    </div>
+  <div class="over-box">
+    <h2>Game Over ! You lose life !</h2>
+    <p>
+      Press
+      <span v-if="isMobile">here</span>
+      <i v-else>ESC</i>
+      to restart a new game.
+    </p>
+  </div>
 </div>

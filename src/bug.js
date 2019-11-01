@@ -142,17 +142,17 @@ export default class Bug {
 
     if (
       isTrappedArea(A, this.leftovers) ||
-            isTrappedArea(B, this.leftovers) ||
-            isTrappedArea(C, this.leftovers) ||
-            isTrappedArea(D, this.leftovers) ||
-            isTrappedArea(E, this.leftovers) ||
-            isTrappedArea(F, this.leftovers) ||
-            isTrappedArea(G, this.leftovers) ||
-            isTrappedArea(H, this.leftovers) ||
-            isTrappedArea(I, this.leftovers) ||
-            isTrappedArea(J, this.leftovers) ||
-            isTrappedArea(K, this.leftovers) ||
-            isTrappedArea(L, this.leftovers)
+      isTrappedArea(B, this.leftovers) ||
+      isTrappedArea(C, this.leftovers) ||
+      isTrappedArea(D, this.leftovers) ||
+      isTrappedArea(E, this.leftovers) ||
+      isTrappedArea(F, this.leftovers) ||
+      isTrappedArea(G, this.leftovers) ||
+      isTrappedArea(H, this.leftovers) ||
+      isTrappedArea(I, this.leftovers) ||
+      isTrappedArea(J, this.leftovers) ||
+      isTrappedArea(K, this.leftovers) ||
+      isTrappedArea(L, this.leftovers)
     ) {
       return true
     } else {

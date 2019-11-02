@@ -1,6 +1,6 @@
 {
     "watchFolder": "style/less",
-    "outputFolder": "style",
+    "outputFolder": "dist",
     "mainFile": "main.less",
     "minified": true,
     "sourceMap": false

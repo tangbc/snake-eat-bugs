@@ -32,7 +32,7 @@ export default {
   LENGTH: 1,
 
   // move speed
-  SPEED: 178,
+  SPEED: 175,
 
   // how many records remain, at least 2
   RECORDS: isMobile ? 4 : 5

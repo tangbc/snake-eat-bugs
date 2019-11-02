@@ -113,6 +113,19 @@
         }
       }
 
+      .screen-snake,
+      .screen-bug {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+      }
+      .screen-snake {
+        z-index: 2;
+      }
+
       /* sanke */
       .snake {
         z-index: 6;
@@ -124,7 +137,7 @@
         &.head {
           z-index: 12;
           border-radius: 0;
-          // background: data-uri('image/png;base64', '../../resource/images/head.png');
+          background: data-uri('image/png;base64', '../../resource/images/head.png');
         }
         &.head.dead {
           background: data-uri('image/png;base64', '../../resource/images/head-dead.png');
@@ -136,19 +149,15 @@
           background: #b00f10;
         }
         &.LEFT {
-          -webkit-transform: rotate(0);
           transform: rotate(0);
         }
         &.RIGHT {
-          -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
         }
         &.UP {
-          -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
         }
         &.DOWN {
-          -webkit-transform: rotate(270deg);
           transform: rotate(270deg);
         }
       }
@@ -157,7 +166,6 @@
       .bug {
         z-index: 5;
         position: absolute;
-        background: red;
         background-repeat: no-repeat;
 
         &.fresh {

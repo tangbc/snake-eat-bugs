@@ -18,29 +18,33 @@
 </div>
 <div class="screen" v-else>
   <!-- snake list -->
-  <a class="snake"
-    v-for="snake in snakes"
-    v-bind:class="[snake.type, snake.direct, snake.life]"
-    v-bind:style="{
-        width: scale,
-        height: scale,
-        'background-size': bgsize,
-        top: (snake.y * unit) + 'px',
-        left: (snake.x * unit) + 'px'
-    }"
-  ></a>
+  <div class="screen-snake">
+    <div class="snake"
+      v-for="snake in snakes"
+      v-bind:class="[snake.type, snake.direct, snake.life]"
+      v-bind:style="{
+          width: scale,
+          height: scale,
+          'background-size': bgsize,
+          top: (snake.y * unit) + 'px',
+          left: (snake.x * unit) + 'px'
+      }"
+    ></div>
+  </div>
   <!-- bug list -->
-  <b class="bug animated jackInTheBox"
-    v-for="bug in bugs"
-    v-bind:class="bug.eaten ? 'eaten' : 'fresh'"
-    v-bind:style="{
-        width: scale,
-        height: scale,
-        'background-size': bgsize,
-        top: (bug.y * unit) + 'px',
-        left: (bug.x * unit) + 'px'
-    }"
-  ></b>
+  <div class="screen-bug">
+    <div class="bug animated jackInTheBox"
+      v-for="bug in bugs"
+      v-bind:class="bug.eaten ? 'eaten' : 'fresh'"
+      v-bind:style="{
+          width: scale,
+          height: scale,
+          'background-size': bgsize,
+          top: (bug.y * unit) + 'px',
+          left: (bug.x * unit) + 'px'
+      }"
+    ></div>
+  </div>
   <div class="pause animated fadeInPause" v-show="isPause">
     <div class="pause-button" v-on:click="cancelPause">
       <div class="icon"></div>

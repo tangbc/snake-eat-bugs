@@ -1,20 +1,22 @@
 <div class="curtain" v-show="!running">
-  <ul class="tips" v-if="isMobile">
-    <li>
-        Press to start or pause game.
-    </li>
-    <li>
-        <span class="start-button">START</span>
-    </li>
-  </ul>
-  <ul class="tips" v-else>
-    <li>
-        Press <code>SPACE</code> to start or pause game.
-    </li>
-    <li>Press <code>⬆️</code> <code>⬇️</code> <code>⬅️</code> <code>➡️</code> or
-        <code>W</code> <code>A</code> <code>S</code> <code>D</code> to control direct.
-    </li>
-  </ul>
+  <div class="wrapper animated rubberBand delay-1s">
+    <ul class="tips" v-if="isMobile">
+      <li>
+          Press to start or pause game.
+      </li>
+      <li>
+          <span class="start-button">START</span>
+      </li>
+    </ul>
+    <ul class="tips" v-else>
+      <li>
+          Press <code>SPACE</code> to start or pause game.
+      </li>
+      <li>Press ⬆️ ⬇️ ⬅️ ➡️ or
+          <code>W</code> <code>A</code> <code>S</code> <code>D</code> control direct.
+      </li>
+    </ul>
+  </div>
 </div>
 <div class="screen" v-else>
   <!-- snake list -->
@@ -58,7 +60,7 @@
     <p>
       Press
       <span v-if="isMobile">here</span>
-      <i v-else>ESC</i>
+      <span v-else>ESC</span>
       to restart a new game.
     </p>
   </div>

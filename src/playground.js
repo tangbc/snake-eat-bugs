@@ -24,8 +24,8 @@ const EDGE_Y = LINES - 1
 // create a grid line position cssText
 const createGridLineStyle = (top, left) => ([
     `top: ${top}px; left: ${left}px;`,
-    (top ? 'border-top: 1px dashed #ccc;' : 'bottom: 0px;'),
-    (left ? 'border-left: 1px dashed #ccc;' : 'right: 0px;'),
+    (top ? 'border-top: 1px dashed;' : 'bottom: 0px;'),
+    (left ? 'border-left: 1px dashed;' : 'right: 0px;'),
     'padding: 0; margin: 0; position: absolute; overflow: hidden;'
 ].join(''))
 
@@ -123,12 +123,12 @@ const Playground = Sugar.Component.extend({
 
     // build rows
     for (i = 0; i <= EDGE_X; i++) {
-      gridLines += `<p style="${createGridLineStyle(0, UNIT * i)}"></p>`
+      gridLines += `<div class="line" style="${createGridLineStyle(0, UNIT * i)}"></div>`
     }
 
     // build lines
     for (i = 0; i <= EDGE_Y; i++) {
-      gridLines += `<p style="${createGridLineStyle(UNIT * i, 0)}"></p>`
+      gridLines += `<div class="line" style="${createGridLineStyle(UNIT * i, 0)}"></div>`
     }
 
     this.vm.$els.grid.innerHTML = gridLines

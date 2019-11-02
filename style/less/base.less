@@ -16,7 +16,8 @@ body {
   font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
   height: 100%;
   line-height: 1.4em;
-  color: #4d4d4d;
+  color: midnightblue;
+  background: midnightblue;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 300;
@@ -24,6 +25,7 @@ body {
   // text-shadow: 0px 0px 1px;
 
   @media (min-width: 320px) and (max-width: 480px) {
+    background: #fff;
     -webkit-user-select: none;
     user-select: none;
     -webkit-tap-highlight-color: rgba(0, 0 ,0, 0);
@@ -41,7 +43,8 @@ h1 {
   text-align: center;
   font-weight: 100;
   font-size: 44px;
-  color: #8fbc8f;
+  letter-spacing: 1px;
+  color: lightslategray;
 
   @media (min-width: 320px) and (max-width: 480px) {
     font-size: 30px;
@@ -50,10 +53,9 @@ h1 {
 
 code {
   display: inline-block;
-  padding: 1px 6px;
+  padding: 0 6px;
   border-radius: 3px;
-  color: #c7254e;
-  background-color: #f9f2f4;
+  // text-decoration: underline;
 }
 
 #app {
@@ -82,6 +84,7 @@ code {
   text-align: center;
   padding: 1em;
   margin-top: 5em;
+  color: #fff;
 
   h2 {
     font-size: 24px;

@@ -2,9 +2,13 @@
   position: relative;
   width: 100%;
   height: 100%;
-  border: 0 solid rgba(119,136,153,0.6);
+  border: 0 solid midnightblue;
   border-top: none;
-  background: #f0f8ff;
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    border-color: #fff;
+    background: #f0f8ff;
+  }
 
   .curtain {
     width: 100%;
@@ -12,14 +16,14 @@
     text-align: center;
     position: absolute;
     z-index: 10;
-    line-height: 150%;
-    padding-top: 20%;
     box-sizing: border-box;
+    background: rgba(255,248,220,.9);
 
-    h2 {
-      font-size: 26px;
-      font-weight: normal;
-      color: #61a261;
+    .wrapper {
+      position: absolute;
+      line-height: 150%;
+      width: 100%;
+      height: 100%;
     }
 
     .tips {
@@ -33,8 +37,13 @@
 
       li {
         padding: 15px 0;
-        font-size: 20px;
+        font-size: 24px;
+        font-weight: 400;
+        color: #8fbc8f;
         list-style: none;
+        -webkit-text-stroke: 1px #8fbc8f;
+        -webkit-text-fill-color : #b3eab3;
+        font-family: fantasy, serif;
 
         @media (min-width: 320px) and (max-width: 480px) {
           font-size: 18px;
@@ -63,7 +72,7 @@
       height: 100%;
       position: absolute;
       z-index: 8;
-      background: rgba(255,248,220,0.9);
+      background: rgb(255,248,220);
 
       @keyframes fadeInPause {
         from {
@@ -183,8 +192,11 @@
     height: 100%;
     position: absolute;
     z-index: 7;
-    background: #EEE;
-    opacity: 0.5;
+    background: #fff;
+
+    .line {
+      border-color: #000;
+    }
   }
 
   /********* PlayGround result content ***********/
@@ -195,8 +207,8 @@
     height: 100%;
     text-align: center;
     color: #fff;
-    // font-family: fantasy, serif;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(25, 24, 112, 0.8);
+    font-family: fantasy, serif;
     text-shadow: 1px 1px 5px #f00, -1px -1px 5px #f00;
 
     .over-box {
@@ -209,6 +221,7 @@
 
     h2 {
       font-size: 30px;
+      font-weight: 300;
 
       @media (min-width: 320px) and (max-width: 480px) {
         font-size: 22px;
@@ -220,9 +233,6 @@
       @media (min-width: 320px) and (max-width: 480px) {
         font-size: 18px;
       }
-    }
-    i {
-      color: #ffd700;
     }
   }
 }

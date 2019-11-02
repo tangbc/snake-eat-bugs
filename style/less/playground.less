@@ -118,16 +118,16 @@
         z-index: 6;
         position: absolute;
         border-radius: 30%;
-        background: #bd5900;
+        background: #449529;
         background-repeat: no-repeat;
 
         &.head {
           z-index: 12;
           border-radius: 0;
-          background: url(https://tangbc.github.io/snake-eat-bugs/resource/images/head.png);
+          // background: data-uri('image/png;base64', '../../resource/images/head.png');
         }
         &.head.dead {
-          background: url(https://tangbc.github.io/snake-eat-bugs/resource/images/head-dead.png);
+          background: data-uri('image/png;base64', '../../resource/images/head-dead.png');
         }
         &.body {
           z-index: 11;
@@ -161,10 +161,10 @@
         background-repeat: no-repeat;
 
         &.fresh {
-          background: url(https://tangbc.github.io/snake-eat-bugs/resource/images/bug.png);
+          background: data-uri('image/png;base64', '../../resource/images/bug.png');
         }
         &.eaten {
-          background: url(https://tangbc.github.io/snake-eat-bugs/resource/images/bug-eaten.png);
+          background: data-uri('image/png;base64', '../../resource/images/bug-eaten.png');
         }
       }
   }

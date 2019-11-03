@@ -1,18 +1,23 @@
 import App from './app'
 import { isMobile, getAnimationEndName } from './util'
 
+const titleEl = document.querySelector('#game-name')
+
+const showTitle = () => {
+  titleEl.classList.add('bounceInDown')
+  titleEl.style.visibility = 'visible'
+}
+
 const createApp = () => {
   window.app = window.Sugar.core.create('app', App)
 }
 
-const gameNameEl = document.querySelector('#game-name')
-gameNameEl.classList.add('bounceInDown')
-gameNameEl.style.visibility = 'visible'
-
 if (isMobile) {
-  gameNameEl.addEventListener(getAnimationEndName(), () => {
+  showTitle()
+
+  titleEl.addEventListener(getAnimationEndName(), () => {
     setTimeout(() => {
-      gameNameEl.parentNode.removeChild(gameNameEl)
+      titleEl.parentNode.removeChild(titleEl)
       createApp()
     }, 500)
   })
@@ -23,5 +28,8 @@ if (isMobile) {
     }
   })
 } else {
-  window.addEventListener('load', createApp)
+  window.addEventListener('load', () => {
+    showTitle()
+    createApp()
+  })
 }

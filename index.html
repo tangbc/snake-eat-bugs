@@ -18,7 +18,10 @@
     <h1 id="game-name" class="animated" style="visibility: hidden;">SNAKE EAT BUGS</h1>
     <!-- loading tips -->
     <div v-show="loading" class="loading">
-      <p>Loading modules, please waiting......</p>
+      <div class="text">Loading modules, please wait</div>
+      <div class="tail">
+        <div class="spinner">......</div>
+      </div>
     </div>
     <div v-else class="ready" style="display: none;">
       <!-- modules -->

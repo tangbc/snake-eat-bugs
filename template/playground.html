@@ -1,18 +1,12 @@
 <div class="curtain" v-show="!running">
-  <div class="wrapper animated rubberBand delay-1s">
+  <div class="wrapper animated rubberBand delay-2s">
     <ul class="tips" v-if="isMobile">
-      <li>
-        Press to start or pause game.
-      </li>
+      <li>Press to start or pause game.</li>
       <span class="start-button">START</span>
     </ul>
     <ul class="tips" v-else>
-      <li>
-        Press <code>SPACE</code> to start or pause game.
-      </li>
-      <li>Press ⬆️ ⬇️ ⬅️ ➡️ or
-        <code>W</code> <code>A</code> <code>S</code> <code>D</code> control direct.
-      </li>
+      <li>Press SPACE to start or pause game.</li>
+      <li>Press ↑ ↓ ← → or W A S D control direct.</li>
     </ul>
   </div>
 </div>

@@ -9,7 +9,7 @@
     "build:css": "less-watch-compiler --config less-compiler.json --run-once",
     "dev": "npm run build:watch & npm run server & npm run less:watch",
     "build:watch": "microbundle build --format umd --sourcemap true --watch",
-    "build": "npm run lint & npm run build:css & rm -rf dist & microbundle build --format umd --sourcemap false"
+    "build": "npm run lint & rm -rf dist & npm run build:css & microbundle build --format umd --sourcemap false"
   },
   "tinyNodeServer": {
     "root": "./",
